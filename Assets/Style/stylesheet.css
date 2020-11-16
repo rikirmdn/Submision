@@ -1,0 +1,372 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(189, 252, 217);
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+#profile-image {
+    width: 50%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 300px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: rgb(0, 0, 0) 3px 3px 2px;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+    color: rgb(0, 0, 0);
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-shadow: rgb(255, 255, 255) 3px 3px 2px;
+    background-color: rgb(149, 255, 149);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.274);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+h3 {
+    color: rgb(0, 0, 0);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    margin-bottom: 5px;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 20px;
+}
+
+ol {
+    list-style: none;
+}
+
+ol li a {
+    color: rgb(0, 61, 33);
+    text-decoration: none
+}
+
+ol .fa {
+    margin-right: 7px;
+}
+
+ol a:hover {
+    color: rgb(255, 145, 0);
+}
+
+ol a:active {
+    color: orange;
+}
+
+section {
+    list-style: none;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.582);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.582);
+    border-radius: 10px;
+    padding: 7px;
+    width: 100%;
+    margin-top: 1px;
+    background-color: rgb(218, 255, 232);
+}
+
+iframe {
+    margin-top: 5px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.582);
+}
+.contac {
+    text-align: center;
+    font-weight: bolder;
+    font-style: oblique;
+    line-height: 2.8;
+}
+
+/* struktur navigasi */
+nav {
+    display: flex;
+    background-color: rgb(8, 37, 8);
+    justify-content: space-around;
+    color: rgb(255, 255, 255);
+    height: 65px;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: medium;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 0, 106);
+}
+
+.sub-satu ul {
+    display: none;
+
+}
+
+nav ul li:hover .sub-satu {
+    display: flex;
+    position: absolute;
+    background-color: rgb(8, 37, 8);
+    margin: 0px;
+}
+
+nav ul li:hover .sub-satu ul {
+    display: block;
+    margin: 5px;
+}
+
+nav ul li:hover .sub-satu ul li {
+    width: 120px;
+    padding: 7px;
+    border-bottom: 1px dotted rgb(0, 255, 255);
+    background: transparent;
+    border-radius: 1%;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.438);
+}
+
+.sub-dua {
+    display: none;
+}
+
+.hover-2:hover .sub-dua {
+    position: absolute;
+    display: block;
+    margin-top: -31px;
+    margin-left: 115px;
+    background-color: rgb(8, 37, 8);
+}
+
+.fa {
+    margin-right: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 100px;
+    height: 29px;
+    left: -35px;
+    top: -4px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: 0.9s;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: rgb(0, 179, 30);
+    transform: scale(0.5);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    background-color: rgb(0, 179, 30);
+    transform: scale(0.1);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: rgb(0, 179, 30);
+    transform: scale(0.5);
+}
+
+/* struktur cover */
+.container-cover {
+    margin: 0% auto;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+.cover {
+    text-align: center;
+    background-image: url(/Assets/Image/bg.jpg);
+    background-size: 100px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* struktur content*/
+.container-content {
+    margin-top: 20px;
+}
+
+.article {
+    float: left;
+    width: 70%;
+}
+
+.aside {
+    float: right;
+    width: 28%;
+    padding-left: 10px;
+    text-align: center;
+}
+
+/* struktur footer */
+footer {
+    text-align: center;
+    font-size: small;
+    font-family: 'Oswald', sans-serif;
+    padding: 8px;
+    margin: 0px 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(8, 37, 8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.438);
+    clear: both;
+}
+
+footer p {
+    color: rgb(0, 0, 0);
+}
+
+footer a {
+    text-decoration: none
+}
+
+footer a:hover {
+    color: aqua;
+}
+
+footer a:visited {
+    color: rgb(43, 255, 0);
+}
+
+footer a:active {
+    color: orange;
+}
+
+main {
+    padding: 6px;
+    overflow: auto;
+}
+
+/* struktur felx footer */
+.container-footer {
+    margin: 20px 5px 5px 6px;
+}
+
+.footer {
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+}
+
+
+
+@media screen and (max-width: 660px) {
+    .article,
+    .aside {
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+@media(min-width: 660px) {
+    .container-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer {
+        width: 32%;
+    }
+}
+@media screen and (max-width: 800px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 22%;
+        height: 30vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(8, 37, 8);
+        z-index: 1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
