@@ -1,2 +1,2 @@
 # Submision
-Submisvera contoh submision bintang 4 dicod***
+Submisvera contoh submision web pemrograman dasar
